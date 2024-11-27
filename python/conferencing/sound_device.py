@@ -9,10 +9,6 @@ import sounddevice as sd
 logger = logging.getLogger(__name__)
 
 
-class AudioStreamClosed(Exception):
-    pass
-
-
 async def send_input_device_stream(future: asyncio.Future, audio_callback: Callable):
     def callback(
         indata: np.ndarray, frames: int, time_info: dict, status: sd.CallbackFlags

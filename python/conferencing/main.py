@@ -5,7 +5,7 @@ import os
 
 from dotenv import load_dotenv
 
-from example.conferencing.audio_from_room import (
+from .audio_from_room import (
     push_room_audio_frame,
     push_to_callback,
 )
